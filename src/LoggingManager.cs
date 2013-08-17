@@ -14,6 +14,11 @@ namespace IHI.Server
         {
             _readers = new HashSet<LoggingReader>();
         }
+        public LoggingManager AddReader(LoggingReader reader)
+        {
+            _readers.Add(reader);
+            return this;
+        }
 
 
         public LoggingManager Debug(string channel, string text)
